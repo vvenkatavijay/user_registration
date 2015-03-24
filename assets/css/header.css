@@ -1,0 +1,27 @@
+.nav_items {
+	display: inline-block;
+	width: 80px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	vertical-align: top;
+	text-align: center;
+}
+
+#header {
+	border: 1px solid silver;
+}
+
+#left_nav {
+	padding-left: 20px;
+}
+
+#right_nav {
+	padding-right: 20px;
+}
+
+#logo {
+	font-size: 120%;
+	position: relative;
+	bottom: 2px; /* TO DO - More elegant solution */
+	width: 120px;
+}
