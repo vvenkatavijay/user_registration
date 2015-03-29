@@ -1,16 +1,32 @@
+<?php 
+
+$profile_data = $this->session->userdata('user_details');
+$profile_id = $profile_data['id'];
+
+$header_data = array('profile_id'=> $profile_id);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Register</title>
+	<title>Add New User</title>
 	<link rel="stylesheet" type="text/css" href="/assets/bootstrap/css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="/assets/css/header.css">
-	<link rel="stylesheet" type="text/css" href="/assets/css/register.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/add_user.css">
 </head>
 <body>
-	<?php $this->load->view('partials/header');?>
+	<?php $this->load->view('partials/hearder_dashboard', $header_data); ?>
 	<div class="container">
-		<h2>Register</h2>
+		<div>
+			<form action="/dashboard">
+				<button class="pull-right btn btn-primary btn-lg back_button">
+					Back to Dashboard
+				</button>
+			</form>
+			<h3>Add User</h3>
+		</div>
 <?php
 		if($message) {
 
@@ -29,9 +45,8 @@
 <?php 
 		}
 ?>
-
-		<div id="register">
-		<form action="/main/register_user/register" method="post">
+		<div>
+		<form action="/main/register_user/admin" method="post" class="col-md-4">
 			<div class="form-group">
 				<label for="InputEmail">Email Address:</label>
 				<input type="text" name="email" placeholder="Email" id="InputEmail" class="form-control">
@@ -52,9 +67,8 @@
 				<label for="InputConfirmPassword">Password Confirmation:</label>
 				<input type="password" name="confpassword" placeholder="Confirm Password" id="InputConfirmPassword" class="form-control">
 			</div>
-			<input type="submit" value="Register" class="btn btn-success" id="sign_in_button">
+			<input type="submit" value="Add User" class="btn btn-success pull-right">
 		</form>
-		<p id="signin_link"><a href="/signin">Already have an account? Log in here!</a></p>
 	</div>
 </body>
 </html>

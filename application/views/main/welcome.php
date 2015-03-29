@@ -3,6 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Sign In</title>
+	<link rel="stylesheet" type="text/css" href="/assets/bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/header.css">
 	<link rel="stylesheet" type="text/css" href="/assets/css/welcome.css">
 </head>
 <body>
@@ -11,7 +13,7 @@
 		<div class="jumbotron" id="welcome">
 			<h2>Welcome to the Test App</h2>
 			<p>This is a proof of concept app built using Code Igniter</p>
-			<p><a class="btn btn-primary btn-lg" href="#">Start</a></p>
+			<p><a class="btn btn-primary btn-lg" href="/signin">Start</a></p>
 		</div>
 		<div class = "row" id="details">
 			<div class="col-md-4"> 

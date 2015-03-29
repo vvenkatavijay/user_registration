@@ -1,0 +1,12 @@
+fieldset {
+	border: 1px solid silver;
+	padding: 10px;
+}
+
+legend {
+	font-size: 100%;
+	display: inline;
+	width: 120px;
+	font-style: normal;
+	text-decoration: none;
+}

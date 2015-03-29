@@ -1,0 +1,42 @@
+.inline {
+	display: inline-block;
+	width: 200px;
+}
+
+.message {
+	display: block;
+	border: 1px solid silver;
+	width: 100%;
+	padding: 3px 10px 10px 10px;
+	min-height: 50px;
+
+}
+
+.comment {
+	display: block;
+	border: 1px solid silver;
+	margin: 0px 0px 0px 20px;
+	width: inherit;
+	padding: 3px 10px 10px 10px;
+	min-height: 50px;
+}
+
+.comment_name {
+	margin-left: 20px;
+	margin-bottom: 2px;
+}
+
+.message_div {
+	display: block;
+	margin-top: 20px;
+	clear: both;
+}
+
+.comment_form {
+	width: inherit;
+	padding: 20px;
+}
+
+.message_box {
+	min-height: 100px;
+}
