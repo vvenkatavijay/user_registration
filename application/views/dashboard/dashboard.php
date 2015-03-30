@@ -28,6 +28,23 @@ $header_data = array('profile_id'=> $profile_id);
 	<link rel="stylesheet" type="text/css" href="/assets/bootstrap/css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="/assets/css/header.css">
 	<link rel="stylesheet" type="text/css" href="/assets/css/dashboard.css">
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			
+		});	
+
+		function alert_user(id) {
+
+				var message = "Are you sure you want to delete this user?";
+				var choice = confirm(message);
+
+				if (choice) {
+					window.location = '../users/remove/'.concat(id);
+				}
+		}			
+
+	</script>
 </head>
 <body>
 	<?php $this->load->view('partials/hearder_dashboard', $header_data) ?>
@@ -91,7 +108,7 @@ $header_data = array('profile_id'=> $profile_id);
 ?>	
 								<td>
 									<a href= <?=$url?>>edit</a>
-									<a href="#">remove</a>
+									<a href="#" onclick="alert_user(<?=$user['id']?>)">remove</a>
 								</td>		
 <?php 
 							}

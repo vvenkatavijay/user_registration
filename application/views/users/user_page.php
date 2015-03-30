@@ -84,7 +84,6 @@ $header_data = array('profile_id'=> $profile_id);
 					<label>Comment</label>
 					<textarea name="new_comment" placeholder="Enter your comment" class="form-control comment_box"></textarea>
 				</div>
-				<?php var_dump($message)?>
 				<input type="hidden" name="comment_by" value="<?=$user_details['id']?>">
 				<input type="hidden" name="comment_for_message" value="<?=$message['id']?>">
 				<input type="submit" value="Post" class="btn btn-success pull-right">

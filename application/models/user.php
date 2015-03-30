@@ -139,6 +139,19 @@ class User extends CI_Model
 
 		return $this->db->query($query, $comment_data);
 	}
+
+	public function delete_user($id) 
+	{
+		$comment_query = "DELETE FROM comments WHERE user_id = ?";
+		$message_query = "DELETE FROM messages WHERE user_id = ?";
+		$user_query = "DELETE FROM users WHERE user_id = ?";
+
+		$result = ($this->db->query($comment_query, $id)) || 
+		          ($this->db->query($message_query, $id)) ||
+				  ($this->db->query($user_query, $id));
+
+		return $result;
+	}
 }
 
 ?>

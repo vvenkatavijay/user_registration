@@ -216,6 +216,14 @@ class Users extends CI_Controller
 		redirect($url);
 	}
 
+	public function remove($id) {
+		$this->load->model('User');
+
+		$this->User->delete_user($id);
+
+		redirect("/dashboard");
+	}
+
 	public function add_error($error) 
 	{
 		$errors = $this->session->flashdata('errors');
