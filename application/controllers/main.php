@@ -1,6 +1,8 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Main extends CI_Controller {
+require_once('common.php');
+
+class Main extends Common{
 
 	public function __construct()
 	{
@@ -26,7 +28,6 @@ class Main extends CI_Controller {
 		}
 		else {
 			$errors = $this->session->flashdata('errors');
-
 			$view_data = array('errors' => $errors );
 			$this->load->view('main/signin.php', $view_data);
 		}
@@ -80,7 +81,6 @@ class Main extends CI_Controller {
 
 	public function authenticate()
 	{
-
 		$this->load->library('form_validation');
 		$this->load->model('User');
 
